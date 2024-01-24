@@ -8,4 +8,6 @@ func main() {
 
 	fmt.Println(hand.toString())
 	fmt.Println(remainingDeck.toString())
+
+	cards.saveToFile("my_cards")
 }
