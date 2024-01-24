@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // this new deck type kinda of "extends" the []string slice built-in type
 type deck []string
@@ -29,4 +32,8 @@ func newDeck() deck {
 
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+func (d deck) toString() string {
+	return strings.Join(d, ",")
 }
